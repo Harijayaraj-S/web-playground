@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>List Data</title>
+    </head>
+    <body>
+
+        <ul id="list"></ul>
+
+        <script>
+    async function loadPosts() {
+
+        let res = await fetch("https://jsonplaceholder.typicode.com/posts");
+        let data = await res.json();
+
+        let list = document.getElementById("list");
+
+        data.slice(0, 10).forEach(post => {
+
+            let li = document.createElement("li");
+            li.innerText = post.title;
+
+            list.appendChild(li);
+
+        });
+
+        }
+
+        loadPosts();
+    </script>
+
+    </body>
+</html>

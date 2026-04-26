@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Change Event</title>
+    </head>
+    <body>
+        <input id="email" type="text">
+        <script>
+            let input = document.getElementById("email");
+            input.addEventListener("change", function() {
+                console.log("Changed:", input.value);
+            });
+        </script>
+    </body>
+</html>

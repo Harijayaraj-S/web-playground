@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML content replace</title>
+    </head>
+    <body>
+        <div id="content">Loading...</div>
+        <script>
+            async function loadHtml() {
+                let res = await fetch("https://httpbin.org/html");
+                let existing_content = document.getElementById("content");
+                existing_content.innerHTML = await res.text()
+            }
+            loadHtml();
+        </script>
+    </body>
+</html>

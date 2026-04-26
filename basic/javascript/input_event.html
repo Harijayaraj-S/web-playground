@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Input Event</title>
+    </head>
+    <body>
+        <input id="name" type="text">
+        <ul id="list"></ul>
+
+        <script>
+            
+        let input = document.getElementById("name");
+            input.addEventListener("input", function() {
+
+            let li = document.createElement("li");
+            li.innerHTML = input.value;
+            document.getElementById("list").appendChild(li);
+            console.log(input.value);
+        });
+    </script>
+
+    </body>
+</html>

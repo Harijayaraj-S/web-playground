@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Create Element</title>
+    </head>
+    <body>
+
+        <button onclick="addItem()">Add</button>
+        <ul id="list"></ul>
+
+        <script>
+        function addItem() {
+            let li = document.createElement("li");
+            li.innerHTML = "New Item";
+            document.getElementById("list").appendChild(li);
+        }
+    </script>
+
+    </body>
+</html>
